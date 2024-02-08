@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+// NextJ14からは必須
+import Header from "./Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ja">
+      <body className="container mx-auto bg-slate-700 text-slate-50">
+        <Header></Header>
+        {children}
+        <footer>footer</footer>
+      </body>
     </html>
   );
 }
