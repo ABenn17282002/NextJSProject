@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-// NextJ14からは必須
+// Header,footerモジュール
 import Header from "./Header";
+import Footer from "./Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="container mx-auto bg-slate-700 text-slate-50">
-        <Header></Header>
+        <Header/>
         {children}
-        <footer>footer</footer>
+        <Footer/>
       </body>
     </html>
   );
