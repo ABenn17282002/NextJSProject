@@ -1,0 +1,22 @@
+{
+	"posts": [
+		{
+			"id": "first-post-id",
+			"title": "First Post Title",
+			"content": "The content for the first post.",
+			"createdAt": "2024/02/09"
+		},
+		{
+			"id": "second-post-id",
+			"title": "Second Post Title",
+			"content": "The content for the second post.",
+			"createdAt": "2024/02/09"
+		},
+		{
+			"id": "third-post-id",
+			"title": "Third Post Title",
+			"content": "The content for the third post.",
+			"createdAt": "2024/02/09"
+		}
+	]
+}
