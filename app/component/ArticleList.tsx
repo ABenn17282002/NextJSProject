@@ -23,7 +23,7 @@ const ArticleList = ({ artciles }: ArticleListProps) => {
 				<div className="bg-white flex flex-col justify-start p-6">
 					<Link href="#" className="text-blue-700 pb-4 font-bold">Technology</Link>
 					<Link href="#" className="text-slate-700  text-3xl font-bold hover:text-gray-700 pb-4">{artcile.title}</Link>
-					<p className="text-sm pb-3 text-slate-700">By YamaAtsu, published on {artcile.created}</p>
+					<p className="text-sm pb-3 text-slate-700">By YamaAtsu, published on { artcile.createdAt }</p>
 					<Link href="#" className="pb-6 text-slate-700">{artcile.content}</Link>
 					<Link href="#" className='text-pink-800 hover:text-black'>続きを読む</Link>
 				</div>
