@@ -4,6 +4,8 @@ import "./globals.css";
 // Header,footerモジュール
 import Header from "./Header";
 import Footer from "./Footer";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +23,10 @@ export default function RootLayout({
     <html lang="ja">
       <body className="container mx-auto bg-slate-700 text-slate-50">
         <Header/>
-        {children}
-        <Footer/>
+        <Suspense fallback={<Loading />}>
+          {children}
+          <Footer/>
+        </Suspense>
       </body>
     </html>
   );
