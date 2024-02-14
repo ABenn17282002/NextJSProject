@@ -24,7 +24,11 @@ const ArticleList = ({ artciles }: ArticleListProps) => {
 					<Link href={`/${artcile.id}`} className="text-blue-700 pb-4 font-bold">Technology</Link>
 					<Link href={`/${artcile.id}`}  className="text-slate-700  text-3xl font-bold hover:text-gray-700 pb-4">{artcile.title}</Link>
 					<p className="text-sm pb-3 text-slate-700">By YamaAtsu, published on { artcile.createdAt }</p>
-					<Link href={`/${artcile.id}`}  className="pb-6 text-slate-700">{artcile.content}</Link>
+					<Link href={`/${artcile.id}`}  className="pb-6 text-slate-700">
+						{artcile.content.length > 70
+						? artcile.content.substring(0, 70)
+						: artcile.content}
+					</Link>
 					<Link href={`/${artcile.id}`}  className='text-pink-800 hover:text-black'>続きを読む</Link>
 				</div>
 			</article>
