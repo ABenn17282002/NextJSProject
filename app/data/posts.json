@@ -17,6 +17,24 @@
 			"title": "Third Post Title",
 			"content": "The content for the third post.",
 			"createdAt": "2024/02/09"
-		}
+		},
+		{
+			"id": "react-course",
+			"title": "Reactをオンラインでマスター",
+			"content": "モダンなReactコースでフロントエンドスキルを向上させています",
+			"createdAt": "2024/01/20"
+		  },
+		  {
+			"id": "vuejs-workshop",
+			"title": "Vue.jsワークショップに参加",
+			"content": "インタラクティブなセッションでVue.jsのコンポーネント設計を学びます",
+			"createdAt": "2024/02/11"
+		  },
+		  {
+			"id": "angular-conference",
+			"title": "Angularカンファレンスの体験",
+			"content": "最新のAngular機能についての知識を深めるためにカンファレンスに参加しました",
+			"createdAt": "2024/02/05"
+		  }
 	]
 }
