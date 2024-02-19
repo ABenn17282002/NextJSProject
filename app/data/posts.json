@@ -1,40 +1,64 @@
 {
-	"posts": [
-		{
-			"id": "first-post-id",
-			"title": "First Post Title",
-			"content": "pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。",
-			"createdAt": "2024/02/09"
-		},
-		{
-			"id": "second-post-id",
-			"title": "Second Post Title",
-			"content": "The content for the second post.",
-			"createdAt": "2024/02/09"
-		},
-		{
-			"id": "third-post-id",
-			"title": "Third Post Title",
-			"content": "The content for the third post.",
-			"createdAt": "2024/02/09"
-		},
-		{
-			"id": "react-course",
-			"title": "Reactをオンラインでマスター",
-			"content": "モダンなReactコースでフロントエンドスキルを向上させています",
-			"createdAt": "2024/01/20"
-		  },
-		  {
-			"id": "vuejs-workshop",
-			"title": "Vue.jsワークショップに参加",
-			"content": "インタラクティブなセッションでVue.jsのコンポーネント設計を学びます",
-			"createdAt": "2024/02/11"
-		  },
-		  {
-			"id": "angular-conference",
-			"title": "Angularカンファレンスの体験",
-			"content": "最新のAngular機能についての知識を深めるためにカンファレンスに参加しました",
-			"createdAt": "2024/02/05"
-		  }
-	]
+  "posts": [
+    {
+      "id": "first-post-id",
+      "title": "First Post Title",
+      "content": "pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。pages ディレクトリではページのルーティングはファイル名によって決まっていました。例えば pages/about.js というファイルは /about というパスに対応します。App Router ではルーティングに対応するファイルは page.js という固定の名前になります。/about というパスに対応するファイルは app/about/page.js という名前になるのです。page.js 以外にも共通されたレイアウトを担当する layout.js、ローディング UI を表示する loading.js などさまざまな特殊なファイルが存在します。",
+      "createdAt": "2024/02/09"
+    },
+    {
+      "id": "second-post-id",
+      "title": "Second Post Title",
+      "content": "The content for the second post.",
+      "createdAt": "2024/02/09"
+    },
+    {
+      "id": "third-post-id",
+      "title": "Third Post Title",
+      "content": "The content for the third post.",
+      "createdAt": "2024/02/09"
+    },
+    {
+      "id": "react-course",
+      "title": "Reactをオンラインでマスター",
+      "content": "モダンなReactコースでフロントエンドスキルを向上させています",
+      "createdAt": "2024/01/20"
+    },
+    {
+      "id": "vuejs-workshop",
+      "title": "Vue.jsワークショップに参加",
+      "content": "インタラクティブなセッションでVue.jsのコンポーネント設計を学びます",
+      "createdAt": "2024/02/11"
+    },
+    {
+      "id": "angular-conference",
+      "title": "Angularカンファレンスの体験",
+      "content": "最新のAngular機能についての知識を深めるためにカンファレンスに参加しました",
+      "createdAt": "2024/02/05"
+    },
+    {
+      "id": "next.js14-test",
+      "title": "次世代ウェブ開発の未来",
+      "content": "近年、ウェブ開発の世界では次世代の技術が急速に普及しています。これには、Next.jsのようなフレームワークが大きく貢献しています。Next.jsは、リアクティブでパフォーマンスの高いウェブアプリケーションを構築するためのモダンで強力なツールセットを提供します。\n\nNext.js 14は、これまで以上に開発者に柔軟性と効率性をもたらす多くの新機能を提供しています。例えば、ISR（Incremental Static Regeneration）機能は、静的ページの再生成を自動化し、ユーザーにとってリッチな体験を提供します。また、TypeScriptサポートの向上やホットリローディングの改善など、開発プロセスをよりスムーズにする機能も含まれています。\n\nこれからのウェブ開発では、Next.jsのようなモダンなフレームワークがますます重要となるでしょう。開発者は、これらのツールを活用して、ユーザーに高速で快適なウェブ体験を提供するための新たな可能性を追求しています。\n",
+      "createdAt": "2024-02-19T07:58:51.054Z"
+    },
+    {
+      "id": "test",
+      "title": "test",
+      "content": "test",
+      "createdAt": "2024-02-19T08:04:23.022Z"
+    },
+    {
+      "id": "title",
+      "title": "titletest",
+      "content": "testblog",
+      "createdAt": "2024-02-19T08:21:21.606Z"
+    },
+    {
+      "id": "test",
+      "title": "test",
+      "content": "test記事だよー",
+      "createdAt": "2024-02-19T08:40:00.281Z"
+    }
+  ]
 }

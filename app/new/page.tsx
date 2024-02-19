@@ -1,21 +1,53 @@
-import React from 'react'
+"use client";
 
-const page = () => {
+// useRouter,useState,BlogAPIの読み込み
+import { useRouter } from "next/navigation";
+import React, { useState } from 'react';
+import { createArticle } from '../blogAPI';
+
+// Blog作成関数
+const CreateBlogPage = () => {
+	// useRouterフックを使用してrouterを取得
+	const router = useRouter();
+	// 作成する記事の型
+	const [id, setId] = useState<string>("");
+	const [title, setTitle] = useState<string>("");
+	const [content, setContent] = useState<string>("");
+
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		// 記事作成
+		await createArticle(id, title, content);
+  		// ホームページにリダイレクトする
+		router.push("/");
+	  	// ページを再読み込みする
+		router.refresh();
+	};
+
 	return (
 		<div>
 			<h2 className="text-2xl font-bold mb-4">新規投稿</h2>
-			<form className="bg-slate-200 p-6 rounded shadow-lg">
+			<form className="bg-slate-200 p-6 rounded shadow-lg"
+				onSubmit={handleSubmit}>
 				<div className="mb-4">
 					<label className="block text-gray-700 text-sm font-bold mb-2">URL</label>
-					<input type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+					<input
+						type="text"
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						onChange={(e) => setId(e.target.value)}/>
 				</div>
 				<div className="mb-4">
 					<label className="block text-gray-700 text-sm font-bold mb-2">タイトル</label>
-					<input type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+					<input
+						type="text"
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						onChange={(e) => setTitle(e.target.value)}/>
 				</div>
 				<div className="mb-4">
 					<label className="block text-gray-700 text-sm font-bold mb-2">本文</label>
-					<textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-40"></textarea>
+					<textarea
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-40"
+						onChange={(e) => setContent(e.target.value)}></textarea>
 				</div>
 				<button type="submit" className="py-2 px-4 border rounded-md bg-orange-300">作成</button>
 			</form>
@@ -23,4 +55,4 @@ const page = () => {
 	)
 }
 
-export default page
+export default CreateBlogPage
