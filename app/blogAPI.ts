@@ -70,3 +70,21 @@ export const createArticle = async (
 	const NewArticle = await res.json();
 	return NewArticle;
 };
+
+// 投稿削除
+export const deleteArticle = async (id:string): Promise<Article>=>{
+	// DELETEメソッドでidを取得して記事を削除
+	const res = await fetch(`http://localhost:3001/posts/${id}`,{
+		method:"DELETE",
+	});
+
+	// Responseがない場合に限り、Error
+	if (!res.ok){
+		throw new Error("エラーが発生しました。");
+	}
+
+	await new Promise((resolve) => setTimeout(resolve,1000));
+
+	const deleteArticle = await res.json();
+	return deleteArticle;
+};
