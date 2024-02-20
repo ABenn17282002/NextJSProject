@@ -3,9 +3,13 @@ import ArticleList from "./component/ArticleList";
 import { get } from "http";
 import { getAllArticles } from "./blogAPI";
 import { useEffect } from "react";
+//supabaseClientの読み込み
+import { supabase } from "./utils/supabaseClient";
 
 export default  async function Home() {
   const articles = await getAllArticles();
+
+  console.log(supabase);
 
   return (
     <div className="md:flex">
