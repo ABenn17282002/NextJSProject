@@ -13,9 +13,13 @@ const CreateBlogPage = () => {
 	const [id, setId] = useState<string>("");
 	const [title, setTitle] = useState<string>("");
 	const [content, setContent] = useState<string>("");
+	// Load時の設定（defautl:false)
+	const [loading, setLoading] = useState<boolean>(false);
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		// Load
+		setLoading(true);
 		// 記事作成
 		await createArticle(id, title, content);
   		// ホームページにリダイレクトする
@@ -49,7 +53,17 @@ const CreateBlogPage = () => {
 						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-40"
 						onChange={(e) => setContent(e.target.value)}></textarea>
 				</div>
-				<button type="submit" className="py-2 px-4 border rounded-md bg-orange-300">作成</button>
+				<button
+					type="submit"
+					className={`py-2 px-4 border rounded-md ${
+								loading    // ← Load時のbutton挙動
+									? "bg-orange-300 cursor-not-allowed"
+									: "bg-orange-400 hover:bg-orange-500"
+								} text-white font-semibold focus:outline-none`}
+								disabled={loading}
+				>
+				作成
+				</button>
 			</form>
 		</div>
 	)
