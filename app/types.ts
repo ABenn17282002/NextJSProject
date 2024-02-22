@@ -1,7 +1,6 @@
 export type Article ={
-	id:string;
-	title:string;
-	content:string;
-	// 型の修正
-	createdAt:string;
+	content: string | null;
+	createdAt: string;
+	id: string;
+	title: string | null;
 }

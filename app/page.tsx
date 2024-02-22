@@ -1,26 +1,35 @@
+"use client"
+
+// import { getAllArticles } from "./blogAPI";
 import Image from "next/image";
 import ArticleList from "./component/ArticleList";
-import { get } from "http";
-// import { getAllArticles } from "./blogAPI";
-import { useEffect } from "react";
-//supabaseClientの読み込み
-// import { supabase } from "../utils/supabaseClient";
+import { Database } from "@/utils/supabase";
+import { createClient } from "@/utils/supabaseClient";
+import React, { useEffect, useState } from 'react'
 
-export default  async function Home() {
-  // const articles = await getAllArticles();
-  // console.log(supabase);
 
-    // supabaseから読み込み
-    const API_URL = process.env.NEXT_PUBLIC_API_URL;
-    console.log(API_URL);
-    const res = await fetch(`${API_URL}/api`, { cache: "no-store" });
-    const articles = await res.json();
-    console.log(articles);
+export default function Home() {
+
+  //データの取得
+  const [db, setDb] = useState<Database['public']['Tables']['posts']['Row'][]>([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const supabase = createClient()
+      const { data,error } = await supabase.from("posts").select("*");
+      if(data)setDb(data)
+      console.log(error)
+
+    };
+    fetchData();
+  });
+
+  if(!db)return
 
   return (
     <div className="md:flex">
     <section className="w-full md:w-2/3 flex flex-col items-center px-3">
-      {/* <ArticleList articles ={articles}/> */}
+        <ArticleList articles={db} />
     </section>
 
     <aside className="w-full md:w-1/3 flex flex-col items-center px-3 md:pl-6">
@@ -51,4 +60,5 @@ export default  async function Home() {
     </aside>
   </div>
   );
+
 }
