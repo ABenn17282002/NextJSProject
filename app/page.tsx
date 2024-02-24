@@ -1,30 +1,42 @@
 "use client"
 
 // import { getAllArticles } from "./blogAPI";
-import Image from "next/image";
 import ArticleList from "./component/ArticleList";
 import { Database } from "@/utils/supabase";
 import { createClient } from "@/utils/supabaseClient";
 import React, { useEffect, useState } from 'react'
+import Loading from "./loading";
 
 
 export default function Home() {
 
-  //データの取得
-  const [db, setDb] = useState<Database['public']['Tables']['posts']['Row'][]>([])
+  const [db, setDb] = useState<Database['public']['Tables']['posts']['Row'][]>([]);
+  const [loading, setLoading] = useState(true); // ローディング状態を管理するためのステート
 
   useEffect(() => {
     const fetchData = async () => {
-      const supabase = createClient()
-      const { data,error } = await supabase.from("posts").select("*");
-      if(data)setDb(data)
-      console.log(error)
-
+      const supabase = createClient();
+      const { data, error } = await supabase.from("posts").select("*");
+      if (data) {
+        setDb(data);
+        // データ取得後にローディングをfalseに設定
+        setLoading(false);
+      }
+      if (error) {
+        console.error(error);
+        // エラーがある場合もローディングをfalseに設定
+        setLoading(false);
+      }
     };
-    fetchData();
-  });
 
-  if(!db)return
+    fetchData();
+    // 空の依存配列は、この効果が一度だけ実行されることを保証します
+    }, []);
+
+    if (loading) {
+      // データ取得中はローディング状態またはnullをレンダリング
+      return <Loading />;
+    }
 
   return (
     <div className="md:flex">
