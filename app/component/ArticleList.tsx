@@ -1,6 +1,4 @@
 import React from 'react';
-import Link  from "next/link";
-import Image from "next/image";
 // Article,ArtcleCardモジュール
 import { Article } from '../types';
 import ArticleCard from './ArticleCard';
@@ -9,7 +7,6 @@ import ArticleCard from './ArticleCard';
 type ArticleListProps = {
 	articles: Article[]; // Articleの配列を受け取る
 }
-
 
 const ArticleList = ({ articles }: ArticleListProps) => {
 	return (
