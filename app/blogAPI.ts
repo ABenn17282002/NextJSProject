@@ -20,27 +20,27 @@ export const getAllArticles = async (): Promise<Article[]>=>{
 }
 
 // 詳細記事取得用
-export const getDetailArticle = async (id:string): Promise<Article>=>{
-	const res = await fetch(`http://localhost:3001/posts/${id}`,{
-		next:{ revalidate:60 },
-	}); //SSR
+// export const getDetailArticle = async (id:string): Promise<Article>=>{
+// 	const res = await fetch(`http://localhost:3001/posts/${id}`,{
+// 		next:{ revalidate:60 },
+// 	}); //SSR
 
-	// 404Errorの場合
-	if (res.status === 404){
-		notFound();
-	}
+// 	// 404Errorの場合
+// 	if (res.status === 404){
+// 		notFound();
+// 	}
 
-	// Responseがない場合に限り、Error
-	if (!res.ok){
-		throw new Error("エラーが発生しました。");
-	}
+// 	// Responseがない場合に限り、Error
+// 	if (!res.ok){
+// 		throw new Error("エラーが発生しました。");
+// 	}
 
-	// 遅延ローディング
-	await new Promise((resolve) => setTimeout(resolve,1000));
+// 	// 遅延ローディング
+// 	await new Promise((resolve) => setTimeout(resolve,1000));
 
-	const articles = await res.json();
-	return articles;
-}
+// 	const articles = await res.json();
+// 	return articles;
+// }
 
 // 新規記事作成
 export const createArticle = async (
